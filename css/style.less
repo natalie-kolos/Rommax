@@ -24,6 +24,10 @@ body {
     color: white;
     font-size: 20px;
     font-weight: 600;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
   }
   .nav-link-contrast {
     background-color: @primary;
@@ -34,8 +38,7 @@ body {
     border-radius: 2px;
     transition: 0.3s all ease;
     &:hover {
-      color: @secondary;
-      opacity: 0.9;
+      background-color: saturate(@primary, 20%);
     }
   }
 }
@@ -168,4 +171,90 @@ form {
 .btn-primary-custom {
   background-color: @primary;
   color: white;
+  &:hover {
+    background-color: saturate(@primary, 20%);
+  }
+}
+.bg-light {
+  background-color: @neutral!important;
+}
+section {
+  padding: 64px 0;
+  & .section-title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: @secondary;
+    @media @breakpoint-desctop {
+      max-width: 58%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media @breakpoint-mobile {
+      font-size: 24px;
+    }
+  }
+  & .section-title + p {
+    margin-top: 16px;
+  }
+  & .section-title + div {
+    margin-top: 40px;
+  }
+  & .subtitle {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+}
+.features-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+  & img {
+    margin-bottom: 32px;
+  }
+  & .features-block__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  & p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: @body-text-color;
+  }
+}
+
+.carousel-large {
+  & .carousel-block-wrap {
+    padding-right: 16px;
+    padding-left: 16px;
+    & .carousel-block {
+      & .img-cover {
+        position: relative;
+        display: inline-flex;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            66.71deg,
+            rgba(237, 44, 44, 0.71) 0%,
+            rgba(237, 44, 44, 0.07) 41.18%,
+            rgba(237, 44, 44, 0) 71.33%
+          );
+        }
+      }
+    }
+  }
 }
