@@ -196,13 +196,19 @@ section {
       font-size: 24px;
     }
   }
+  & .section-title__reviews::before {
+    content: url(../img/icon-homestars.svg);
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
   & .section-title + p {
     margin-top: 16px;
   }
   & .section-title + div {
     margin-top: 40px;
   }
-  & .subtitle {
+  & .section-subtitle {
     text-align: center;
     font-style: normal;
     font-weight: 500;
@@ -239,9 +245,15 @@ section {
     padding-right: 16px;
     padding-left: 16px;
     & .carousel-block {
+      position: relative;
       & .img-cover {
         position: relative;
         display: inline-flex;
+        margin-bottom: 20px;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -255,6 +267,201 @@ section {
           );
         }
       }
+      & .carousel-block__title {
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        padding-left: 16px;
+      }
     }
+  }
+}
+
+.badge-price {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 3;
+  width: 132px;
+  height: 132px;
+  background-color: @primary;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  & p {
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    &.price {
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 46px;
+    }
+  }
+}
+
+.bg-dark__image {
+  background: linear-gradient(
+      0deg,
+      rgba(31, 26, 23, 0.89),
+      rgba(31, 26, 23, 0.89)
+    ),
+    url(../img/img-bg-dark.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  & .section-title {
+    color: white;
+  }
+}
+.bg-neutral {
+  background-color: @neutral;
+}
+
+.warranty {
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.19);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: @primary;
+}
+
+.text-block {
+  & .text-block__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  & p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #747474;
+  }
+}
+
+.features-stripe {
+  background-color: @primary;
+  padding: 24px 0;
+  color: white;
+  .features-stripe__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .features-stripe__block {
+    display: flex;
+    align-items: center;
+    margin: 0 12px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    img {
+      margin-right: 12px;
+    }
+  }
+}
+
+.reviews-block {
+  padding: 24px;
+  background-color: white;
+  border-radius: @border-radius;
+  margin-bottom: 16px;
+  & .reviews-block__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 4px;
+  }
+  & .reviews-block__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 60%;
+    margin-bottom: 12px;
+  }
+  & p {
+    font-size: 16px;
+    line-height: 160%;
+    color: #747474;
+    margin-bottom: 0;
+  }
+  .reviews-raiting {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
+    & img {
+      margin-right: 6px;
+      &:last-child {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.cta {
+  background-color: @secondary;
+  padding: 48px 0;
+  color: white;
+  & .cta-inner {
+    display: flex;
+    align-items: center;
+  }
+  & .cta-description {
+    margin-right: 5%;
+    & h2 {
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 41px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    & h3 {
+      background-color: @primary;
+      padding: 2px 8px;
+      margin-bottom: 0;
+      width: fit-content;
+      border-radius: @border-radius;
+      font-weight: 900;
+      font-size: 21px;
+      line-height: 29px;
+      letter-spacing: 0.07em;
+    }
+  }
+  & .cta-contact {
+    flex-shrink: 0;
+    & a {
+      font-weight: 800;
+      font-size: 44px;
+      text-align: right;
+      margin-bottom: 12px;
+      color: @primary;
+      text-decoration: none;
+    }
+    & h4 {
+      font-weight: 800;
+      font-size: 30px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+}
+
+.accordion-button-custom {
+  font-weight: 800;
+  font-size: 18px;
+  &:not(.collapsed) {
+    background-color: @neutral;
   }
 }
