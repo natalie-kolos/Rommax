@@ -5,7 +5,6 @@
 
 body {
   font-family: "Nunito Sans", sans-serif;
-  min-height: 1500px;
 }
 
 .navbar-brand {
@@ -53,6 +52,7 @@ body {
   }
   @media @breakpoint-tablet-xl {
     background-color: @secondary;
+    padding: 24px;
     .navbar-brand {
       background-image: url(../img/logo-white.svg);
       width: 260px;
@@ -116,6 +116,9 @@ header {
     background: linear-gradient(71.61deg, #000000 0%, rgba(0, 0, 0, 0) 36.24%);
     opacity: 0.5;
     z-index: -1;
+  }
+  &.exterior {
+    height: auto;
   }
 }
 
@@ -430,10 +433,26 @@ section {
 }
 
 .text-block {
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+  }
+  h3 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  h4 {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 130%;
+    color: @primary;
+  }
   & .text-block__title {
     font-weight: 700;
     font-size: 22px;
-    line-height: 30px;
+    line-height: 130%;
   }
   & p {
     font-weight: 600;

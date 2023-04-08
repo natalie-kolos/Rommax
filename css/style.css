@@ -28,7 +28,6 @@
 }
 body {
   font-family: "Nunito Sans", sans-serif;
-  min-height: 1500px;
 }
 .navbar-brand img {
   width: 375px;
@@ -74,6 +73,7 @@ body {
 @media (max-width: 1199px) {
   .navbar-custom {
     background-color: #1f1a17;
+    padding: 24px;
   }
   .navbar-custom .navbar-brand {
     background-image: url(../img/logo-white.svg);
@@ -136,6 +136,9 @@ header::before {
   background: linear-gradient(71.61deg, #000000 0%, rgba(0, 0, 0, 0) 36.24%);
   opacity: 0.5;
   z-index: -1;
+}
+header.exterior {
+  height: auto;
 }
 .hero {
   background-image: url(..//img/img-hero.png);
@@ -439,10 +442,26 @@ section .section-subtitle {
     font-size: 16px;
   }
 }
+.text-block h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+}
+.text-block h3 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+}
+.text-block h4 {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 130%;
+  color: #ed2c2c;
+}
 .text-block .text-block__title {
   font-weight: 700;
   font-size: 22px;
-  line-height: 30px;
+  line-height: 130%;
 }
 .text-block p {
   font-weight: 600;
