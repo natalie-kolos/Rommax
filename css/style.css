@@ -71,6 +71,41 @@ body {
 .navbar-custom .nav-link-contrast:hover {
   background-color: #ff1a1a;
 }
+@media (max-width: 1199px) {
+  .navbar-custom {
+    background-color: #1f1a17;
+  }
+  .navbar-custom .navbar-brand {
+    background-image: url(../img/logo-white.svg);
+    width: 260px;
+    height: 64px;
+  }
+  .navbar-custom .navbar-toggler {
+    border: 0;
+    padding: 10px 14px;
+  }
+  .navbar-custom .navbar-toggler .navbar-toggler-icon {
+    background-image: url(../img/icon-toggle.svg);
+    border: 0;
+  }
+  .navbar-custom .navbar-toggler .navbar-toggler-icon:hover,
+  .navbar-custom .navbar-toggler .navbar-toggler-icon:active,
+  .navbar-custom .navbar-toggler .navbar-toggler-icon:focus {
+    opacity: 0.8;
+  }
+  .navbar-custom .nav {
+    flex-direction: column;
+    text-align: right;
+  }
+  .navbar-custom .nav .nav-item {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 0;
+  }
+  .navbar-custom .nav .nav-item .nav-link-contrast {
+    width: fit-content;
+  }
+}
 .navbar-scroll-changed {
   background-color: #1f1a17;
   position: fixed;

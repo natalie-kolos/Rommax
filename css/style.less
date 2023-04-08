@@ -51,6 +51,39 @@ body {
       background-color: saturate(@primary, 20%);
     }
   }
+  @media @breakpoint-tablet-xl {
+    background-color: @secondary;
+    .navbar-brand {
+      background-image: url(../img/logo-white.svg);
+      width: 260px;
+      height: 64px;
+    }
+    .navbar-toggler {
+      border: 0;
+      padding: 10px 14px;
+      .navbar-toggler-icon {
+        background-image: url(../img/icon-toggle.svg);
+        border: 0;
+        &:hover,
+        &:active,
+        &:focus {
+          opacity: 0.8;
+        }
+      }
+    }
+    .nav {
+      flex-direction: column;
+      text-align: right;
+      .nav-item {
+        display: flex;
+        justify-content: flex-end;
+        padding: 16px 0;
+        .nav-link-contrast {
+          width: fit-content;
+        }
+      }
+    }
+  }
 }
 
 .navbar-scroll-changed {
